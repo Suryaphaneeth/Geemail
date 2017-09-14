@@ -1,7 +1,7 @@
 all: yees
 
 yees: email.o register.o validation.o sign_In.o crypt.o head.o
-	g++ email.o register.o validation.o sign_In.o crypt.o head.o -lsqlite3 -lcryptopp -std=c++11 -o yees
+	g++ email.o register.o validation.o sign_In.o crypt.o head.o -lsqlite3 -lcrypto++ -std=c++11 -o yees
 	
 email.o: email.cpp
 	g++ -c -std=c++11 email.cpp
